@@ -1,7 +1,15 @@
 {
   "name": "ts-pkg",
   "license": "MIT",
-  "version": "0.0.1",
+  "author": {
+    "name": "Abiel Zulio M",
+    "url": "https://github.com/abielzulio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abielzulio/caleg.git"
+  },
+  "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
