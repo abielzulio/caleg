@@ -19,15 +19,15 @@ const caleg = new Caleg()
 ### DPD
 
 ```typescript
-const dapiList = await caleg.dpd.getDapilList()
-const dapil = await caleg.dpd.getDapil("11")
-const calon = await caleg.dpd.getCalon("aceh/6")
+const dapiList = await caleg.dpd.dapil.list()
+const dapil = await caleg.dpd.dapil.get("11")
+const calon = await caleg.dpd.calon.get("aceh/6")
 ```
 
 ### DPR
 
 ```typescript
-const dapiList = await caleg.dpr.getDapilList()
-const dapil = await caleg.dpr.getDapil("1101")
-const calon = await caleg.dpr.getCalon("aceh-i/partai-kebangkitan-bangsa/6")
+const dapiList = await caleg.dpr.dapil.list()
+const dapil = await caleg.dpr.dapil.get("1101")
+const calon = await caleg.dpr.calon.get("aceh-i/partai-kebangkitan-bangsa/6")
 ```
