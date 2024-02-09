@@ -28,6 +28,6 @@ const calon = await caleg.dpd.getCalon("aceh/6")
 
 ```typescript
 const dapiList = await caleg.dpr.getDapilList()
-const dapil = await caleg.dpr.getDapil("11")
-const calon = await caleg.dpr.getCalon("aceh/6")
+const dapil = await caleg.dpr.getDapil("1101")
+const calon = await caleg.dpr.getCalon("aceh-i/partai-kebangkitan-bangsa/6")
 ```
