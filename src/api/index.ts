@@ -6,6 +6,7 @@ const BASE_URL = "https://caleg.zakiego.com/api"
 export type APIResponse<T> = {
   data: T
   status: string
+  message?: string
 }
 export class APIClient {
   public client: KyInstance

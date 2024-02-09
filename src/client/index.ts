@@ -15,8 +15,8 @@ export class Client<T> {
     try {
       const api = await this.api.get<Dapil[]>(`${this.path}/dapil/list`)
 
-      if (api.status !== "success")
-        throw new Error("Failed to get dapil list data")
+      if (api.status === "error")
+        throw new Error(api.message || "Failed to get dapil list data")
 
       return api.data
     } catch (error) {
@@ -30,7 +30,8 @@ export class Client<T> {
     try {
       const api = await this.api.get<T[]>(`${this.path}/dapil/${id}`)
 
-      if (api.status !== "success") throw new Error("Failed to get dapil data")
+      if (api.status === "error")
+        throw new Error(api.message || "Failed to get dapil data")
 
       return api.data
     } catch (error) {
@@ -44,7 +45,8 @@ export class Client<T> {
     try {
       const api = await this.api.get<T>(`${this.path}/calon/${id}`)
 
-      if (api.status !== "success") throw new Error("Failed to get calon data")
+      if (api.status === "error")
+        throw new Error(api.message || "Failed to get calon data")
 
       return api.data
     } catch (error) {
