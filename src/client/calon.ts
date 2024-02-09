@@ -5,14 +5,13 @@ export class Calon<T> extends Base {
     super(path)
   }
 
-  async get(id: string): Promise<T> {
+  async get(id: string): Promise<T | undefined> {
     try {
-      const api = await this.api.get<T>(`${this.path}/calon/${id}`)
+      const api = await this.api.get<T[]>(`${this.path}/calon/${id}`)
 
-      if (api.status === "error")
-        throw new Error(api.message || "Failed to get calon data")
+      if (api.data.length === 1) return api.data[0]
 
-      return api.data
+      throw new Error(api.message || "Failed to get calon data")
     } catch (error) {
       throw new Error(
         error instanceof Error ? error.message : "Failed to get calon data"
