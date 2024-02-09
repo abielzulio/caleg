@@ -5,3 +5,4 @@ export interface Dapil {
 }
 
 export * from "./dpd"
+export * from "./dpr"
