@@ -1,8 +1,8 @@
-import { DPR } from "./dpr"
+import { CalonDPR } from "./dpr"
 import { Calon } from "./model"
 
 export namespace CalonDPRD {
-  export type Provinsi = Calon<DPR>
+  export type Provinsi = CalonDPR
 
-  export type Kabupaten = Calon<DPR>
+  export type Kabupaten = CalonDPR
 }
